@@ -86,7 +86,6 @@ p.subtitle {
 <img src="bacio.jpg">
 </div>
 
-</div>
 
 <p id="info"></p>
 
