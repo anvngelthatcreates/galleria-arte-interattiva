@@ -74,10 +74,26 @@ h1 {
     border-radius: 22px;
     overflow: hidden;
     cursor: pointer;
+
     background: rgba(255,255,255,0.55);
     backdrop-filter: blur(14px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: all 0.4s ease;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    display: block;
+
+    object-fit: cover;
+    object-position: center center;
+
+    flex-shrink: 0;
+}
 
     /* FIX IMPORTANTE */
     display: flex;
