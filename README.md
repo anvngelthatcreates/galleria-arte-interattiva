@@ -83,15 +83,12 @@ p.subtitle {
 <img src="girasoli.jpg">
 </div>
 
-<div class="card" onclick="show('L'Assenzio, la facciata nascosta della Belle Époque')">
+<div class="card" onclick="show('L'Assenzio, l'altra facciata della Belle Époque')">
 <img src="assenzio.jpg">
 </div>
-
 
 <p id="info"></p>
 
 <script>
 function show(text) {
     document.getElementById("info").innerText = text;
-}
-</script>
