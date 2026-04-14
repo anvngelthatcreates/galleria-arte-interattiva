@@ -82,8 +82,8 @@ p.subtitle {
 <img src="girasoli.jpg">
 </div>
 
-<div class="card" onclick="show('Il Bacio – Klimt, amore e oro eterno')">
-<img src="bacio.jpg">
+<div class="card" onclick="show('L'Assenzio, la facciata nascosta della Belle Époque')">
+<img src="assenzio.jpeg">
 </div>
 
 
