@@ -69,11 +69,38 @@ h1 {
     box-shadow: 0 25px 50px rgba(0,0,0,0.18);
 }
 
+.card {
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+
+    /* FIX IMPORTANTE */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 🔥 FIX DEFINITIVO IMMAGINI CENTRATE */
 .card img {
     width: 100%;
-    height: 220px;
+    height: 240px;
     object-fit: cover;
+
     display: block;
+
+    /* elimina “effetto decentrato” */
+    object-position: center;
+}
+
+/* opzionale ma rende tutto più pulito */
+.gallery {
+    align-items: stretch;
 }
 
 /* overlay elegante */
