@@ -1,5 +1,3 @@
-# galleria-arte-interattiva
-sito web interattivo che valorizza opere d'arte attraverso programmazione e design digitale
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -13,6 +11,8 @@ sito web interattivo che valorizza opere d'arte attraverso programmazione e desi
 
 <img src="opera1.jpg" width="300" onclick="mostra('Descrizione della prima opera')">
 <img src="opera2.jpg" width="300" onclick="mostra('Descrizione della seconda opera')">
+<img src="opera3.jpg" width="300" onclick="mostra('Descrizione della terza opera')">
+<img src="opera4.jpg" width="300" onclick="mostra('Descrizione della quarta opera')">
 
 <p id="testo"></p>
 
