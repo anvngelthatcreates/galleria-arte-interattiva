@@ -83,7 +83,7 @@ p.subtitle {
 </div>
 
 <div class="card" onclick="show('L'Assenzio, la facciata nascosta della Belle Époque')">
-<img src="assenzio.jpeg">
+<img src="assenzio.jpg">
 </div>
 
 
