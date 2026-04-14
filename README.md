@@ -4,10 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aesthetic Art Gallery</title>
+<title>Art Gallery</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -19,107 +17,146 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #f6f6f9, #e9e9f0);
+    background: radial-gradient(circle at top, #f7f7fb, #e6e6ee);
     color: #1a1a1a;
-    text-align: center;
+    overflow-x: hidden;
 }
 
 /* HEADER */
+header {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 52px;
-    margin-top: 50px;
+    font-size: 64px;
     letter-spacing: 1px;
 }
 
 .subtitle {
-    color: #666;
     margin-top: 10px;
-    margin-bottom: 30px;
+    color: #666;
+    font-weight: 300;
 }
 
-/* GALLERY */
+/* GRID */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    padding: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    padding: 50px;
     max-width: 1100px;
     margin: auto;
 }
 
+/* CARD SOPHISTICATA */
 .card {
-    background: rgba(255,255,255,0.6);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
     cursor: pointer;
-    transition: 0.4s ease;
+
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(14px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.18);
 }
 
 .card img {
     width: 100%;
-    height: 180px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 15px;
+    display: block;
+}
+
+/* overlay elegante */
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.25), transparent);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card:hover::after {
+    opacity: 1;
 }
 
 /* MODAL */
 .modal {
-    display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
+    inset: 0;
+    display: none;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(6px);
 }
 
-.modal-content {
+.modal-box {
     background: white;
-    padding: 30px;
-    border-radius: 20px;
-    max-width: 400px;
+    padding: 30px 35px;
+    border-radius: 25px;
+    max-width: 420px;
+    text-align: center;
+
     font-family: 'Playfair Display', serif;
     font-size: 20px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .close {
-    margin-top: 20px;
-    display: inline-block;
-    cursor: pointer;
-    font-size: 14px;
-    color: #666;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* piccoli dettagli premium */
+::selection {
+    background: #000;
+    color: #fff;
 }
 </style>
 </head>
 
 <body>
 
-<h1>Art Gallery</h1>
-<p class="subtitle">CLICCA UN'OPERA PER SCOPRIRNE LA STORIA</p>
+<header>
+    <h1>Art Gallery</h1>
+    <p class="subtitle">Clicca un’opera per esplorarne la storia</p>
+</header>
 
 <div class="gallery">
 
-    <div class="card" onclick="openModal('La Gioconda – Leonardo da Vinci, simbolo del mistero e del Rinascimento')">
+    <div class="card" onclick="show('La Gioconda – Leonardo da Vinci, simbolo del mistero e del Rinascimento')">
         <img src="gioconda.jpg" alt="La Gioconda">
     </div>
 
-    <div class="card" onclick="openModal('I Girasoli – Vincent van Gogh, energia pura e luce')">
+    <div class="card" onclick="show('I Girasoli – Van Gogh, energia pura e luce emotiva')">
         <img src="girasoli.jpg" alt="I Girasoli">
     </div>
 
-    <div class="card" onclick="openModal('L\'Assenzio – Edgar Degas, atmosfera della Belle Époque tra sogno e realtà')">
+    <div class="card" onclick="show('L\'Assenzio – Degas, atmosfera sospesa tra realtà e sogno')">
         <img src="assenzio.jpg" alt="L'Assenzio">
     </div>
 
@@ -127,20 +164,20 @@ h1 {
 
 <!-- MODAL -->
 <div id="modal" class="modal" onclick="closeModal(event)">
-    <div class="modal-content">
-        <p id="modalText"></p>
-        <div class="close">Clicca ovunque per chiudere</div>
+    <div class="modal-box">
+        <p id="text"></p>
+        <div class="close">clicca fuori per chiudere</div>
     </div>
 </div>
 
 <script>
-function openModal(text) {
-    document.getElementById("modalText").innerText = text;
+function show(text) {
+    document.getElementById("text").innerText = text;
     document.getElementById("modal").style.display = "flex";
 }
 
-function closeModal(event) {
-    if (event.target.id === "modal") {
+function closeModal(e) {
+    if (e.target.id === "modal") {
         document.getElementById("modal").style.display = "none";
     }
 }
