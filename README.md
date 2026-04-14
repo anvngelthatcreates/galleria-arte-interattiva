@@ -83,10 +83,6 @@ p.subtitle {
 <img src="girasoli.jpg">
 </div>
 
-<div class="card" onclick="show('Impressione, levar del sole – Monet, nascita dell’Impressionismo')">
-<img src="monet.jpg">
-</div>
-
 <div class="card" onclick="show('Il Bacio – Klimt, amore e oro eterno')">
 <img src="bacio.jpg">
 </div>
