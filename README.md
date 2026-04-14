@@ -70,7 +70,7 @@ p.subtitle {
 <body>
 
 <h1>Art Gallery</h1>
-<p class="subtitle">clicca un'opera per scoprire la sua storia</p>
+<p class="subtitle">CLICCA UN'OPERA PER SCOPRIRE LA SUA STORIA</p>
 
 <div class="gallery">
 
