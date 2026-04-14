@@ -19,13 +19,12 @@ body {
     font-family: 'Inter', sans-serif;
     background: radial-gradient(circle at top, #f7f7fb, #e6e6ee);
     color: #1a1a1a;
-    overflow-x: hidden;
 }
 
 /* HEADER */
 header {
     text-align: center;
-    padding: 80px 20px 40px;
+    padding: 70px 20px 30px;
 }
 
 h1 {
@@ -50,18 +49,16 @@ h1 {
     margin: auto;
 }
 
-/* CARD SOPHISTICATA */
+/* CARD */
 .card {
-    position: relative;
     border-radius: 22px;
     overflow: hidden;
     cursor: pointer;
 
     background: rgba(255,255,255,0.55);
     backdrop-filter: blur(14px);
-
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: all 0.4s ease;
+    transition: 0.4s ease;
 }
 
 .card:hover {
@@ -69,68 +66,11 @@ h1 {
     box-shadow: 0 25px 50px rgba(0,0,0,0.18);
 }
 
-.card {
-    position: relative;
-    border-radius: 22px;
-    overflow: hidden;
-    cursor: pointer;
-
-    background: rgba(255,255,255,0.55);
-    backdrop-filter: blur(14px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    transition: all 0.4s ease;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.card img {
-    width: 100%;
-    height: 240px;
-    display: block;
-
-    object-fit: cover;
-    object-position: center center;
-
-    flex-shrink: 0;
-}
-
-    /* FIX IMPORTANTE */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-/* 🔥 FIX DEFINITIVO IMMAGINI CENTRATE */
 .card img {
     width: 100%;
     height: 240px;
     object-fit: cover;
-
     display: block;
-
-    /* elimina “effetto decentrato” */
-    object-position: center;
-}
-
-/* opzionale ma rende tutto più pulito */
-.gallery {
-    align-items: stretch;
-}
-
-/* overlay elegante */
-.card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.25), transparent);
-    opacity: 0;
-    transition: 0.3s;
-}
-
-.card:hover::after {
-    opacity: 1;
 }
 
 /* MODAL */
@@ -148,36 +88,29 @@ h1 {
     background: white;
     padding: 30px 35px;
     border-radius: 25px;
-    max-width: 420px;
-    text-align: center;
+    max-width: 500px;
+    text-align: left;
 
     font-family: 'Playfair Display', serif;
-    font-size: 20px;
-
     animation: pop 0.3s ease;
 }
 
+.modal-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+}
+
 @keyframes pop {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 .close {
     margin-top: 15px;
     font-size: 13px;
     color: #777;
-}
-
-/* piccoli dettagli premium */
-::selection {
-    background: #000;
-    color: #fff;
+    text-align: center;
 }
 </style>
 </head>
@@ -186,20 +119,20 @@ h1 {
 
 <header>
     <h1>Art Gallery</h1>
-    <p class="subtitle">Clicca un’opera per esplorarne la storia</p>
+    <p class="subtitle">Clicca un’opera per scoprire la sua storia</p>
 </header>
 
 <div class="gallery">
 
-    <div class="card" onclick="show('La Gioconda – Leonardo da Vinci, simbolo del mistero e del Rinascimento')">
+    <div class="card" onclick="show(0)">
         <img src="gioconda.jpg" alt="La Gioconda">
     </div>
 
-    <div class="card" onclick="show('I Girasoli – Van Gogh, energia pura e luce emotiva')">
+    <div class="card" onclick="show(1)">
         <img src="girasoli.jpg" alt="I Girasoli">
     </div>
 
-    <div class="card" onclick="show('L\'Assenzio – Degas, atmosfera sospesa tra realtà e sogno')">
+    <div class="card" onclick="show(2)">
         <img src="assenzio.jpg" alt="L'Assenzio">
     </div>
 
@@ -214,8 +147,26 @@ h1 {
 </div>
 
 <script>
-function show(text) {
-    document.getElementById("text").innerText = text;
+const artworks = [
+`<b>La Gioconda</b> – Leonardo da Vinci<br><br>
+Realizzata tra il 1503 e il 1506, è uno dei dipinti più celebri al mondo. 
+Raffigura Lisa Gherardini e colpisce per il suo enigmatico sorriso e per la tecnica dello sfumato,
+che dona profondità e realismo straordinario. È considerata simbolo del Rinascimento italiano.`,
+
+`<b>I Girasoli</b> – Vincent van Gogh<br><br>
+Serie realizzata tra il 1888 e il 1889 ad Arles. 
+Van Gogh utilizza tonalità calde per esprimere emozioni intense legate alla luce e alla natura.
+I girasoli rappresentano vitalità, amicizia e la ricerca della bellezza nella semplicità.`,
+
+`<b>L’Assenzio</b> – Edgar Degas<br><br>
+Dipinto nel 1876, rappresenta due figure sedute in un bar parigino.
+L’opera riflette l’alienazione sociale della Parigi moderna,
+mostrando la solitudine anche in un contesto urbano affollato.
+È una critica sottile alla società della Belle Époque.`
+];
+
+function show(i) {
+    document.getElementById("text").innerHTML = artworks[i];
     document.getElementById("modal").style.display = "flex";
 }
 
