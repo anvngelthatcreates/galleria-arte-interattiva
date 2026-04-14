@@ -92,3 +92,8 @@ p.subtitle {
 <script>
 function show(text) {
     document.getElementById("info").innerText = text;
+}
+</script>
+
+</body>
+</html>
