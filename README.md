@@ -118,7 +118,7 @@ h1 {
 
 <header>
     <h1>Art Gallery</h1>
-    <p class="subtitle">Clicca un’opera per scoprire la sua storia</p>
+    <p class="subtitle">CLICCA UN'OPERA PER SCOPRIRE LA SUA STORIA</p>
 </header>
 
 <div class="gallery">
