@@ -9,9 +9,15 @@ artworks.forEach(a => {
     a.addEventListener("click", () => {
         img.src = a.dataset.img;
         title.textContent = a.dataset.title;
-        desc.textContent = a.dataset.desc;
+        desc.innerHTML = a.dataset.desc.replace(/\n/g, "<br>");
         lightbox.style.display = "block";
     });
 });
 
 closeBtn.onclick = () => lightbox.style.display = "none";
+
+lightbox.addEventListener("click", e => {
+    if (e.target === lightbox) {
+        lightbox.style.display = "none";
+    }
+});
