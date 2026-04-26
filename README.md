@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -16,49 +15,49 @@
     <!-- Header -->
     <header>
         <h1>Galleria d'Arte Digitale</h1>
-        <p class="subtitle">Le opere di [Nome di tuo fratello]</p>
+        <p class="subtitle">Le opere di Angelica Domenici e Stefano Domenici</p>
     </header>
 
     <!-- Griglia delle opere -->
     <main class="gallery">
 
         <article class="artwork" data-id="1">
-            <img src="img/opera1.jpg" alt="Pelledoca">
+            <img src="img/opera1.jfif" alt="Pelledoca">
             <div class="artwork-overlay">
                 <span>Scopri l'opera</span>
             </div>
         </article>
 
         <article class="artwork" data-id="2">
-            <img src="img/opera2.jpg" alt="Scyllure">
+            <img src="img/opera2.jfif" alt="Scyllure">
             <div class="artwork-overlay">
                 <span>Scopri l'opera</span>
             </div>
         </article>
 
         <article class="artwork" data-id="3">
-            <img src="img/opera3.jpg" alt="Spiratrix">
+            <img src="img/opera3.jfif" alt="Spiratrix">
             <div class="artwork-overlay">
                 <span>Scopri l'opera</span>
             </div>
         </article>
 
         <article class="artwork" data-id="4">
-            <img src="img/opera4.jpg" alt="Maskiume">
+            <img src="img/opera4.jfif" alt="Maskiume">
             <div class="artwork-overlay">
                 <span>Scopri l'opera</span>
             </div>
         </article>
 
         <article class="artwork" data-id="5">
-            <img src="img/opera5.jpg" alt="Mega Shiinotic">
+            <img src="img/opera5.jfif" alt="Mega Shiinotic">
             <div class="artwork-overlay">
                 <span>Scopri l'opera</span>
             </div>
         </article>
 
         <article class="artwork" data-id="6">
-            <img src="img/opera6.jpg" alt="Milleocchi">
+            <img src="img/opera6.jfif" alt="Milleocchi">
             <div class="artwork-overlay">
                 <span>Scopri l'opera</span>
             </div>
