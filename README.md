@@ -10,7 +10,7 @@
 
 <header>
     <h1>Galleria d'Arte Digitale</h1>
-    <p class="subtitle">Le opere di Angelica Domenici e Stefano Domenici</p>
+    <p class="subtitle">Le opere di Stefano Domenici, sito create da Angelica Domenici</p>
 </header>
 
 <main class="gallery">
