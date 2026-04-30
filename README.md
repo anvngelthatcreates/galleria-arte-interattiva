@@ -10,44 +10,49 @@
 
 <header>
     <h1>Galleria d'Arte Digitale</h1>
-    <p class="subtitle">Le opere di Stefano Domenici, sito di Angelica Domenici</p>
+    <p class="subtitle">Le opere di Stefano Domenici, sito create da Angelica Domenici</p>
 </header>
 
 <main class="gallery">
 
-    <!-- 1 -->
-    <article class="artwork" data-id="1">
-        <img src="img/opera1.jfif" alt="Pelledoca">
+    <article class="artwork" data-id="1"
+        data-title="Pelledoca"
+        data-img="https://raw.githubusercontent.com/anvngelthatcreates/galleria-arte-interattiva/main/opera1.jfif">
+        <img src="https://raw.githubusercontent.com/anvngelthatcreates/galleria-arte-interattiva/main/opera1.jfif">
     </article>
 
-    <!-- 2 -->
-    <article class="artwork" data-id="2">
-        <img src="img/opera2.jfif" alt="Scyllure">
+    <article class="artwork" data-id="2"
+        data-title="Scyllure"
+        data-img="https://raw.githubusercontent.com/anvngelthatcreates/galleria-arte-interattiva/main/opera2.jfif">
+        <img src="https://raw.githubusercontent.com/anvngelthatcreates/galleria-arte-interattiva/main/opera2.jfif">
     </article>
 
-    <!-- 3 -->
-    <article class="artwork" data-id="3">
-        <img src="img/opera3.jfif" alt="Spiratrix">
+    <article class="artwork" data-id="3"
+        data-title="Spiratrix"
+        data-img="https://raw.githubusercontent.com/anvngelthatcreates/galleria-arte-interattiva/main/opera3.jfif">
+        <img src="https://raw.githubusercontent.com/anvngelthatcreates/galleria-arte-interattiva/main/opera3.jfif">
     </article>
 
-    <!-- 4 -->
-    <article class="artwork" data-id="4">
-        <img src="img/opera4.jfif" alt="Maskiume">
+    <article class="artwork" data-id="4"
+        data-title="Maskiume"
+        data-img="https://raw.githubusercontent.com/anvngelthatcreates/galleria-arte-interattiva/main/opera4.jfif">
+        <img src="https://raw.githubusercontent.com/anvngelthatcreates/galleria-arte-interattiva/main/opera4.jfif">
     </article>
 
-    <!-- 5 -->
-    <article class="artwork" data-id="5">
-        <img src="img/opera5.jfif" alt="Mega Shiinotic">
+    <article class="artwork" data-id="5"
+        data-title="Mega Shiinotic"
+        data-img="https://raw.githubusercontent.com/anvngelthatcreates/galleria-arte-interattiva/main/opera5.jfif">
+        <img src="https://raw.githubusercontent.com/anvngelthatcreates/galleria-arte-interattiva/main/opera5.jfif">
     </article>
 
-    <!-- 6 -->
-    <article class="artwork" data-id="6">
-        <img src="img/opera6.jfif" alt="Milleocchi">
+    <article class="artwork" data-id="6"
+        data-title="Milleocchi"
+        data-img="https://raw.githubusercontent.com/anvngelthatcreates/galleria-arte-interattiva/main/opera6.jfif">
+        <img src="https://raw.githubusercontent.com/anvngelthatcreates/galleria-arte-interattiva/main/opera6.jfif">
     </article>
 
 </main>
 
-<!-- LIGHTBOX UNICO CORRETTO -->
 <div class="lightbox" id="lightbox">
     <button id="closeBtn">&times;</button>
     <img id="lightboxImg">
