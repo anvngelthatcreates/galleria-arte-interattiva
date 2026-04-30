@@ -31,9 +31,9 @@ const title = document.getElementById("lightboxTitle");
 const desc = document.getElementById("lightboxDesc");
 const closeBtn = document.getElementById("closeBtn");
 
-artworks.forEach(a => {
+artworks.forEach((a, index) => {
     a.addEventListener("click", () => {
-        const id = a.dataset.id;
+        const id = index + 1; // usa l'ordine, non data-id
         img.src = a.dataset.img;
         title.textContent = a.dataset.title;
         desc.innerHTML = descriptions[id].replace(/\n/g, "<br>");
