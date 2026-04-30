@@ -33,13 +33,18 @@ const closeBtn = document.getElementById("closeBtn");
 
 artworks.forEach((a, index) => {
     a.addEventListener("click", () => {
-        const id = index + 1; // usa l'ordine, non data-id
-        img.src = a.dataset.img;
-        title.textContent = a.dataset.title;
+        const id = index + 1;
+
+        img.src = a.querySelector("img").src;
+        title.textContent = a.querySelector("img").alt;
+
         desc.innerHTML = descriptions[id].replace(/\n/g, "<br>");
-        lightbox.style.display = "block";
+
+        lightbox.classList.add("active");
     });
 });
 
-closeBtn.onclick = () => lightbox.style.display = "none";
-lightbox.onclick = e => { if (e.target === lightbox) lightbox.style.display = "none"; };
+closeBtn.onclick = () => lightbox.classList.remove("active");
+lightbox.onclick = e => {
+    if (e.target === lightbox) lightbox.classList.remove("active");
+};
