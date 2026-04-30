@@ -48,3 +48,26 @@ closeBtn.onclick = () => lightbox.classList.remove("active");
 lightbox.onclick = e => {
     if (e.target === lightbox) lightbox.classList.remove("active");
 };
+/* ===== FIX DESCRIZIONE LIGHTBOX ===== */
+
+.lightbox-content{
+    flex-direction: column !important;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.lightbox-content img{
+    max-width: 90% !important;
+    max-height: 55vh !important;
+}
+
+.lightbox-info{
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.lightbox-info p{
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
